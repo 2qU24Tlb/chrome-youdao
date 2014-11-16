@@ -1,0 +1,13 @@
+{
+    "name": "myDict",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "My Customized You Dao Dict",
+    "permissions": ["http://*/*"],
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+    "icons": {"16": "dict_16.png", "128": "dict_128.png"}
+}
