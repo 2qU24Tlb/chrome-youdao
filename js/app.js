@@ -28,6 +28,7 @@ function getWords() {
     .done(function(data) {
         var i;
 
+        $("#container").empty();
         for (i in data.basic.explains) {
             $("#container").append("<li>"+data.basic.explains[i]+"</li>");
         };
