@@ -1,6 +1,11 @@
 $(document).ready(function() {
     $("#word").toggleInputValue();
     $("#search").click(getWords);
+    $("#word").keyup(function(event) {
+        if (event.keycode == 13) {
+            $("#search").click();
+        }
+    });
 });
 
 $.fn.toggleInputValue = function() {
@@ -35,3 +40,4 @@ function getWords() {
         //$("#debug").html("done");
     });
 }
+
