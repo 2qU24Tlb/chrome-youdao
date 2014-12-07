@@ -1,12 +1,15 @@
 $(document).ready(function() {
     $("#word").toggleInputValue();
+    $("#word").keypress(PressEnter);
+    $("#word").focus();
     $("#search").click(getWords);
-    $("#word").keyup(function(event) {
-        if (event.keycode == 13) {
-            $("#search").click();
-        }
-    });
 });
+
+function PressEnter(event) {
+    if (event.which == 13) {
+      $("#search").click();
+    }
+};
 
 $.fn.toggleInputValue = function() {
     var input = $(this);
