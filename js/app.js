@@ -1,12 +1,12 @@
 $(document).ready(function() {
     $("#word").toggleInputValue();
-    $("#word").keypress(PressEnter);
+    $("#word").keyup(PressEnter);
     $("#word").focus();
     $("#search").click(getWords);
 });
 
 function PressEnter(event) {
-    if (event.which == 13) {
+    if (event.keyCode == 13) {
       $("#search").click();
     }
 };
@@ -43,4 +43,3 @@ function getWords() {
         //$("#debug").html("done");
     });
 }
-
